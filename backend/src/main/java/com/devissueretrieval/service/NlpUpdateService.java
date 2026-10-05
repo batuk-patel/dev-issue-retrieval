@@ -98,7 +98,7 @@ public class NlpUpdateService {
                 .githubIssueId(issue.getGithubIssueId())
                 .repositoryName(issue.getRepositoryName())
                 .title(issue.getTitle())
-                .body(issue.getBody())
+                .body(issue.getBody() != null ? issue.getBody() : "")
                 .labels(issue.getLabels())
                 .issueUrl(issue.getIssueUrl())
                 .createdAt(issue.getCreatedAt() != null ? issue.getCreatedAt().toString() : "")
